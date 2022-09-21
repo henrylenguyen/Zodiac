@@ -1,0 +1,113 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+width: 100%;
+height: auto;
+font-size: 1.8rem;
+}
+img{
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+input,
+button,
+textarea{
+  outline: none;
+  font-size: 1.8rem;
+}
+textarea{
+  resize: none;
+}
+button{
+  cursor: pointer;
+}
+@mixin size($width,$height:$width) {
+  width: $width;
+  height: $height;
+}
+@mixin flexbox($align:flex-start,$justify:flex-start,$flex-direction:row,$wrap:nowrap) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $flex-direction;
+  flex-wrap: $wrap;
+}
+.content{
+    margin: 10rem auto;
+    width: 80%;
+    height: auto;
+    border: 1px solid #333;
+    padding: 2rem;
+    &__title{
+      text-align: center;
+      color: red;
+      font-size: 4rem;
+      text-transform: capitalize;
+    }
+    &__text{
+      margin: 1rem 5rem 1rem;
+    }
+}
+.question{
+  margin: 2rem;
+  &__number{
+    font-weight: bold;
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+  &__text{
+    cursor: pointer;
+    
+  }
+  &__submit{
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 4rem;
+    margin-bottom: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #91d791;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 1rem;
+    transform: translateY(0);
+    transition: all 0.5s linear;
+    box-shadow: 0 10px 0 0px #60ab60;
+    &:hover{
+      transform: translateY(0.5rem);
+    transition: all 0.5s linear;
+
+    }
+  }
+  input[type="radio"]{
+    margin: 1rem 2rem;
+    position: relative;
+    cursor: pointer;
+    
+  }
+
+}
+@media screen and (max-width:767px){
+  .content{
+    width: 100%;
+    border: none;
+  }
+
+}
